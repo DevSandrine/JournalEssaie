@@ -60,18 +60,17 @@ http://www.templatemo.com/tm-413-flip-turn
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1%;
+  gap: 10px; /* Espace entre les éléments */
+  padding: 0 10px; /* Padding latéral pour éviter débordement */
   box-sizing: border-box;
-  padding: 0 1%;
 }
 
 .portfolio-group {
-  display: block;
-  width: 23%;
-  margin: 0.5% auto;
+  flex: 1 1 23%;
+  max-width: 23%;
   box-sizing: border-box;
   text-align: center;
-  vertical-align: top;
+  margin-bottom: 15px;
 }
 
 .portfolio-group img {
@@ -127,53 +126,48 @@ http://www.templatemo.com/tm-413-flip-turn
     max-width: 95%;
   }
   .portfolio-group {
-    width: 31.3%;
-    margin: 1% auto;
+    flex-basis: 31%;
+    max-width: 31%;
   }
 }
 
 @media (max-width: 900px) {
   .portfolio-group {
-    width: 46%;
-    margin: 1.5% auto;
+    flex-basis: 48%;
+    max-width: 48%;
   }
 }
 
 @media (max-width: 600px) {
   #portfolio-content {
-    gap: 2%;
-    padding: 0 2%;
+    gap: 10px;
+    padding: 0 10px;
   }
   .portfolio-group {
-    width: 48%; /* 2 images par rangée */
-    margin: 1% 1%;
+    flex-basis: 48%;
+    max-width: 48%;
+    margin-bottom: 15px;
   }
 }
 
 @media (max-width: 400px) {
-  #portfolio-content {
-    padding: 0 2%;
-  }
+  /* Toujours 2 par ligne sur petits écrans */
   .portfolio-group {
-    width: 48%; /* toujours 2 images par rangée */
-    margin: 1% 1%;
+    flex-basis: 48%;
+    max-width: 48%;
+  }
+  nav.main-nav #logo a {
+    font-size: 1.1em;
+  }
+  header h1 {
+    font-size: 1.8em;
+  }
+  header h2 {
+    font-size: 1em;
   }
 }
 
-/* Autres styles du site */
-
-nav.main-nav #logo a {
-  font-size: 1.1em;
-}
-
-header h1 {
-  font-size: 1.8em;
-}
-
-header h2 {
-  font-size: 1em;
-}
-
+/* Profile pic styles */
 .profile-pic {
   display: flex;
   align-items: center;
@@ -197,12 +191,12 @@ header h2 {
   margin: 20px 0;
 }
 
-/* Titre du nom centré */
+/* Titre du nom centré, plus petit que le h1 par défaut, même police et couleur */
 .name-title {
   font-size: 2.2em;
 }
 
-/* Photo centrée */
+/* Pour la photo centrée */
 .profile-pic-centered {
   width: 150px;
   height: 150px;
@@ -223,7 +217,7 @@ header h2 {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive : réduction taille sur petits écrans */
+/* Responsive profile pic & title */
 @media (max-width: 600px) {
   .name-title {
     font-size: 1.4em;

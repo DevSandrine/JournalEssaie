@@ -184,22 +184,75 @@ http://www.templatemo.com/tm-413-flip-turn
 			border: 3px solid #999;
 			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 		}
+
+		/* Conteneur du header centré */
+.top-header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Titre du nom centré, plus petit que le h1 par défaut, même police et couleur */
+.name-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400; /* comme dans ton Google Font */
+  color: #333; /* même couleur que tes titres */
+  font-size: 1.8em; /* plus petit que ton h1 actuel */
+  margin-bottom: 15px;
+}
+
+/* Conteneur de la photo centrée */
+.profile-pic-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 150px;
+}
+
+/* Image de profil ronde et responsive */
+.profile-pic-centered img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #999;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+/* Responsive : réduire un peu la taille sur petits écrans */
+@media (max-width: 600px) {
+  .name-title {
+    font-size: 1.4em;
+  }
+
+  .profile-pic-centered {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 400px) {
+  .name-title {
+    font-size: 1.2em;
+  }
+
+  .profile-pic-centered {
+    max-width: 100px;
+  }
+}
+
 	</style>
 </head>
 
 <body>
 	<div class="main-container">
-		<nav class="main-nav">
-			<div id="logo" class="left">
-				<a href="#">Sandrine Devaradja📷👒</a>
-			</div>
-			<div class="profile-pic right">
-				<img src="pp.jpeg" alt="Photo de profil" />
-			</div>
-			<ul class="nav right center-text">
-				<!-- navigation vide -->
-			</ul>
-		</nav>
+  <header class="top-header">
+    <h1 class="name-title">Sandrine Devaradja📷👒</h1>
+    <div class="profile-pic-centered">
+      <img src="pp.jpeg" alt="Photo de profil" />
+    </div>
+  </header>
+
 		<div class="content-container">
 			<header>
 				<h1 class="center-text">Mon journal en images</h1>

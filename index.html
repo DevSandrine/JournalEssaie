@@ -140,27 +140,22 @@ http://www.templatemo.com/tm-413-flip-turn
 			}
 		}
 
-		@media (max-width: 600px) {
-		  .portfolio-group {
-		    width: 48%;
- 		   margin: 1% auto;
- 			 }
-			}
+@media (max-width: 600px) {
+  #portfolio-content {
+    gap: 2%; /* pour éviter que les éléments se touchent */
+  }
 
-				/* auto pour centrer */
-			}
-
-			.portfolio-group .btn {
-				padding: 10px 20px;
-				font-size: 1.1em;
-			}
-		}
-
-		@media (max-width: 400px) {
   .portfolio-group {
     width: 48%;
-    margin: 1% auto;
+    margin: 1% 0; /* pas de "auto" horizontal, ça casse le layout */
   }
+}
+
+
+		@media (max-width: 400px) {
+			nav.main-nav #logo a {
+				font-size: 1.1em;
+			}
 }
 
 

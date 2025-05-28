@@ -193,32 +193,30 @@ http://www.templatemo.com/tm-413-flip-turn
 
 /* Titre du nom centré, plus petit que le h1 par défaut, même police et couleur */
 .name-title {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400; /* comme dans ton Google Font */
-  color: #333; /* même couleur que tes titres */
-  font-size: 1.8em; /* plus petit que ton h1 actuel */
-  margin-bottom: 15px;
+  font-size: 2.2em; /* un peu plus grand */
 }
 
-/* Conteneur de la photo centrée */
+/* Pour la photo : */
 .profile-pic-centered {
+  width: 150px;  /* fixe la largeur */
+  height: 150px; /* fixe la hauteur, égale à la largeur */
+  margin: 0 auto;
+  border-radius: 50%; /* cercle parfait */
+  overflow: hidden;   /* coupe tout ce qui dépasse */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  max-width: 150px;
 }
 
-/* Image de profil ronde et responsive */
 .profile-pic-centered img {
   width: 100%;
-  max-width: 150px;
-  height: auto;
-  border-radius: 50%;
+  height: 100%; /* obligatoire pour que la hauteur soit égale */
+  object-fit: cover;
+  border-radius: 50%; /* cercle parfait */
   border: 3px solid #999;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  object-fit: cover;
 }
+
 
 /* Responsive : réduire un peu la taille sur petits écrans */
 @media (max-width: 600px) {

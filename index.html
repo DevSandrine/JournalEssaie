@@ -184,18 +184,62 @@ http://www.templatemo.com/tm-413-flip-turn
 			border: 3px solid #999;
 			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 		}
+
+		/* Nouveau groupe pour logo + profil */
+.nav-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 10px 0;
+	text-align: center;
+}
+
+/* Centrer et réduire l’image sur petits écrans */
+.nav-header .profile-pic {
+	padding: 0;
+	margin: 0;
+}
+
+.nav-header .profile-pic img {
+	width: 100px;
+	height: 100px;
+}
+
+#logo a {
+	font-size: 1.8em;
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+}
+
+@media (max-width: 600px) {
+	#logo a {
+		font-size: 1.4em;
+		display: block;
+		text-align: center;
+	}
+	.nav-header {
+		flex-direction: column;
+	}
+}
+
 	</style>
 </head>
 
 <body>
 	<div class="main-container">
 		<nav class="main-nav">
-			<div id="logo" class="left">
-				<a href="#">Sandrine Devaradja📷👒</a>
-			</div>
-			<div class="profile-pic right">
-				<img src="pp.jpeg" alt="Photo de profil" />
-			</div>
+			<div class="nav-header">
+	<div class="profile-pic">
+		<img src="pp.jpeg" alt="Photo de profil" />
+	</div>
+	<div id="logo">
+		<a href="#">Sandrine Devaradja📷👒</a>
+	</div>
+</div>
+
 			<ul class="nav right center-text">
 				<!-- navigation vide -->
 			</ul>

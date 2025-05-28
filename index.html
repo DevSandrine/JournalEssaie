@@ -166,13 +166,36 @@ http://www.templatemo.com/tm-413-flip-turn
 				font-size: 1em;
 			}
 		}
+
+		.profile-pic {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-left: auto;
+			padding-right: 20px;
+		}
+
+		.profile-pic img {
+			width: 150px;
+			/* Taille du cercle */
+			height: 150px;
+			border-radius: 50%;
+			object-fit: cover;
+			border: 3px solid #999;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+		}
 	</style>
 </head>
 
 <body>
 	<div class="main-container">
 		<nav class="main-nav">
-			<div id="logo" class="left"><a href="#">Sandrine Devaradja📷👒 </a></div>
+			<div id="logo" class="left">
+				<a href="#">Sandrine Devaradja📷👒</a>
+			</div>
+			<div class="profile-pic right">
+				<img src="images/pp.jpeg" alt="Photo de profil" />
+			</div>
 			<ul class="nav right center-text">
 				<!-- navigation vide -->
 			</ul>

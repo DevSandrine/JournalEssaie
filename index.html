@@ -184,67 +184,22 @@ http://www.templatemo.com/tm-413-flip-turn
 			border: 3px solid #999;
 			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 		}
-
-		/* Nouveau header centré avec nom + photo */
-.nav-header {
-	text-align: center;
-	padding: 20px 0;
-}
-
-.nav-header #logo a {
-	font-size: 1.4em; /* plus petit */
-	color: #777; /* gris moyen clair */
-	text-decoration: none;
-	font-weight: 600;
-	display: block;
-	margin-bottom: 10px;
-}
-
-.nav-header .profile-pic {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.nav-header .profile-pic img {
-	width: 160px;
-	height: 160px;
-	border-radius: 50%;
-	object-fit: cover;
-	border: 3px solid #999;
-	box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
-}
-
-/* Responsive: taille du nom et de la photo sur petits écrans */
-@media (max-width: 600px) {
-	.nav-header #logo a {
-		font-size: 1.2em;
-	}
-
-	.nav-header .profile-pic img {
-		width: 130px;
-		height: 130px;
-	}
-}
-
 	</style>
 </head>
 
 <body>
 	<div class="main-container">
 		<nav class="main-nav">
-		<div class="nav-header">
-	<div id="logo">
-		<a href="#">Sandrine Devaradja📷👒</a>
-	</div>
-	<div class="profile-pic">
-		<img src="pp.jpeg" alt="Photo de profil" />
-	</div>
-</div>
-			</nav>
-
-</div>
-
+			<div id="logo" class="left">
+				<a href="#">Sandrine Devaradja📷👒</a>
+			</div>
+			<div class="profile-pic right">
+				<img src="pp.jpeg" alt="Photo de profil" />
+			</div>
+			<ul class="nav right center-text">
+				<!-- navigation vide -->
+			</ul>
+		</nav>
 		<div class="content-container">
 			<header>
 				<h1 class="center-text">Mon journal en images</h1>

@@ -16,234 +16,226 @@ http://www.templatemo.com/tm-413-flip-turn
 	<link href="magnific-popup.css" rel="stylesheet" />
 	<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
 
-	<style>
-		/* Pagination style */
-		.pagination {
-			clear: both;
-			text-align: center;
-			margin-top: 20px;
+<style>
+	/* Pagination style */
+	.pagination {
+		clear: both;
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	.pagination ul {
+		list-style: none;
+		padding: 0;
+		display: inline-block;
+	}
+
+	.pagination ul li {
+		display: inline-block;
+		margin: 0 5px;
+		cursor: pointer;
+		padding: 5px 10px;
+		background: #ddd;
+		border-radius: 3px;
+		user-select: none;
+	}
+
+	.pagination ul li.active {
+		background: #666;
+		color: white;
+		font-weight: bold;
+	}
+
+	.pagination ul li.disabled {
+		background: #eee;
+		color: #aaa;
+		cursor: default;
+	}
+
+	/* Gallery grid */
+	#portfolio-content {
+		max-width: 1100px;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1%;
+		box-sizing: border-box;
+		padding: 0 1%;
+	}
+
+	.portfolio-group {
+		display: block;
+		width: 23%;
+		margin: 0.5%;
+		box-sizing: border-box;
+		text-align: center;
+		vertical-align: top;
+	}
+
+	.portfolio-group img {
+		width: 100%;
+		height: auto;
+		display: block;
+		margin-bottom: 8px;
+	}
+
+	.portfolio-group .detail {
+		padding: 0 5px;
+	}
+
+	.portfolio-group .detail h3 {
+		margin: 5px 0;
+		font-size: 1.1em;
+		color: #333;
+		font-weight: normal;
+	}
+
+	.portfolio-group .detail p {
+		font-size: 0.9em;
+		color: #555;
+		line-height: 1.3em;
+		margin-bottom: 8px;
+		font-weight: normal;
+	}
+
+	.portfolio-group .btn {
+		display: inline-block;
+		margin-top: 5px;
+		padding: 6px 12px;
+		background-color: white;
+		color: black;
+		font-weight: normal;
+		cursor: pointer;
+		border-radius: 3px;
+		text-align: center;
+		user-select: none;
+		border: 1px solid black;
+		transition: background-color 0.3s ease;
+	}
+
+	.portfolio-group .btn:hover {
+		background-color: #d3d3d3;
+		color: black;
+	}
+
+	/* Responsive styles */
+	@media (max-width: 1200px) {
+		#portfolio-content {
+			max-width: 95%;
 		}
-
-		.pagination ul {
-			list-style: none;
-			padding: 0;
-			display: inline-block;
-		}
-
-		.pagination ul li {
-			display: inline-block;
-			margin: 0 5px;
-			cursor: pointer;
-			padding: 5px 10px;
-			background: #ddd;
-			border-radius: 3px;
-			user-select: none;
-		}
-
-		.pagination ul li.active {
-			background: #666;
-			color: white;
-			font-weight: bold;
-		}
-
-		.pagination ul li.disabled {
-			background: #eee;
-			color: #aaa;
-			cursor: default;
-		}
-
-		/* Gallery grid */
-#portfolio-content {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1%;
-  box-sizing: border-box;
-  padding: 0 1%;
-}
-
 
 		.portfolio-group {
-			display: block;
-			width: 23%;
-			margin: 0.5% auto;
-			/* margin auto horizontal pour centrer */
-			box-sizing: border-box;
-			text-align: center;
-			vertical-align: top;
+			width: 31.3%;
+			margin: 1%;
+		}
+	}
+
+	@media (max-width: 900px) {
+		.portfolio-group {
+			width: 46%;
+			margin: 1.5%;
+		}
+	}
+
+	@media (max-width: 600px) {
+		#portfolio-content {
+			gap: 2%;
+			padding: 0 2%;
 		}
 
-		.portfolio-group img {
-			width: 100%;
-			height: auto;
-			display: block;
-			margin-bottom: 8px;
+		.portfolio-group {
+			width: 48%;
+			margin: 1%;
+		}
+	}
+
+	@media (max-width: 400px) {
+		.portfolio-group {
+			width: 48%;
+			margin: 1%;
 		}
 
-		.portfolio-group .detail {
-			padding: 0 5px;
-		}
-
-		.portfolio-group .detail h3 {
-			margin: 5px 0;
+		nav.main-nav #logo a {
 			font-size: 1.1em;
-			color: #333;
-			font-weight: normal;
 		}
 
-		.portfolio-group .detail p {
-			font-size: 0.9em;
-			color: #555;
-			line-height: 1.3em;
-			margin-bottom: 8px;
-			font-weight: normal;
+		header h1 {
+			font-size: 1.8em;
 		}
 
-		.portfolio-group .btn {
-			display: inline-block;
-			margin-top: 5px;
-			padding: 6px 12px;
-			background-color: white;
-			color: black;
-			font-weight: normal;
-			cursor: pointer;
-			border-radius: 3px;
-			text-align: center;
-			user-select: none;
-			border: 1px solid black;
-			transition: background-color 0.3s ease;
+		header h2 {
+			font-size: 1em;
+		}
+	}
+
+	.profile-pic {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: auto;
+		padding-right: 20px;
+	}
+
+	.profile-pic img {
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		object-fit: cover;
+		border: 3px solid #999;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	}
+
+	.top-header {
+		text-align: center;
+		margin: 20px 0;
+	}
+
+	.name-title {
+		font-size: 2.2em;
+	}
+
+	.profile-pic-centered {
+		width: 150px;
+		height: 150px;
+		margin: 0 auto;
+		border-radius: 50%;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.profile-pic-centered img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 50%;
+		border: 3px solid #999;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	}
+
+	@media (max-width: 600px) {
+		.name-title {
+			font-size: 1.4em;
 		}
 
-		.portfolio-group .btn:hover {
-			background-color: #d3d3d3;
-			color: black;
+		.profile-pic-centered {
+			max-width: 120px;
+		}
+	}
+
+	@media (max-width: 400px) {
+		.name-title {
+			font-size: 1.2em;
 		}
 
-		/* Responsive styles */
-
-		@media (max-width: 1200px) {
-			#portfolio-content {
-				max-width: 95%;
-			}
-
-			.portfolio-group {
-				width: 31.3%;
-				margin: 1% auto;
-				/* auto pour centrer */
-			}
+		.profile-pic-centered {
+			max-width: 100px;
 		}
+	}
+</style>
 
-		@media (max-width: 900px) {
-			.portfolio-group {
-				width: 46%;
-				margin: 1.5% auto;
-				/* auto pour centrer */
-			}
-		}
-
-@media (max-width: 600px) {
-  #portfolio-content {
-    gap: 2%; /* pour éviter que les éléments se touchent */
-  }
-
-  .portfolio-group {
-    width: 48%;
-    margin: 1% 0; /* pas de "auto" horizontal, ça casse le layout */
-  }
-}
-
-
-		@media (max-width: 400px) {
-			nav.main-nav #logo a {
-				font-size: 1.1em;
-			}
-}
-
-
-			header h1 {
-				font-size: 1.8em;
-			}
-
-			header h2 {
-				font-size: 1em;
-			}
-		}
-
-		.profile-pic {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			margin-left: auto;
-			padding-right: 20px;
-		}
-
-		.profile-pic img {
-			width: 150px;
-			/* Taille du cercle */
-			height: 150px;
-			border-radius: 50%;
-			object-fit: cover;
-			border: 3px solid #999;
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-		}
-
-		/* Conteneur du header centré */
-.top-header {
-  text-align: center;
-  margin: 20px 0;
-}
-
-/* Titre du nom centré, plus petit que le h1 par défaut, même police et couleur */
-.name-title {
-  font-size: 2.2em; /* un peu plus grand */
-}
-
-/* Pour la photo : */
-.profile-pic-centered {
-  width: 150px;  /* fixe la largeur */
-  height: 150px; /* fixe la hauteur, égale à la largeur */
-  margin: 0 auto;
-  border-radius: 50%; /* cercle parfait */
-  overflow: hidden;   /* coupe tout ce qui dépasse */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.profile-pic-centered img {
-  width: 100%;
-  height: 100%; /* obligatoire pour que la hauteur soit égale */
-  object-fit: cover;
-  border-radius: 50%; /* cercle parfait */
-  border: 3px solid #999;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-
-/* Responsive : réduire un peu la taille sur petits écrans */
-@media (max-width: 600px) {
-  .name-title {
-    font-size: 1.4em;
-  }
-
-  .profile-pic-centered {
-    max-width: 120px;
-  }
-}
-
-@media (max-width: 400px) {
-  .name-title {
-    font-size: 1.2em;
-  }
-
-  .profile-pic-centered {
-    max-width: 100px;
-  }
-}
-
-	</style>
 </head>
 
 <body>

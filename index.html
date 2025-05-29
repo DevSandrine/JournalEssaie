@@ -20,7 +20,6 @@ http://www.templatemo.com/tm-413-flip-turn
 
 	<style>
 		/* Pagination style */
-/* Pagination style */
 .pagination {
     clear: both;
     text-align: center;
@@ -63,105 +62,65 @@ http://www.templatemo.com/tm-413-flip-turn
     flex-wrap: wrap;
     justify-content: center;
     gap: 1%;
+    box-sizing: border-box;
 }
 
 .portfolio-group {
-    display: block;
-    width: 23%;
-    margin: 0.5% auto;
     box-sizing: border-box;
+    width: 23%;
+    margin: 0.5%;
     text-align: center;
     vertical-align: top;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .portfolio-group img {
     width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 8px;
-}
-
-.portfolio-group .detail {
-    padding: 0 5px;
-}
-
-.portfolio-group .detail h3 {
-    margin: 5px 0;
-    font-size: 1.1em;
-    color: #333;
-    font-weight: normal;
-}
-
-.portfolio-group .detail p {
-    font-size: 0.9em;
-    color: #555;
-    line-height: 1.3em;
-    margin-bottom: 8px;
-    font-weight: normal;
-}
-
-.portfolio-group .btn {
-    display: inline-block;
-    margin-top: 5px;
-    padding: 6px 12px;
-    background-color: white;
-    color: black;
-    font-weight: normal;
-    cursor: pointer;
-    border-radius: 3px;
-    text-align: center;
-    user-select: none;
-    border: 1px solid black;
-    transition: background-color 0.3s ease;
-}
-
-.portfolio-group .btn:hover {
-    background-color: #d3d3d3;
-    color: black;
+    max-width: 100%;
+    border-radius: 5px;
 }
 
 /* Responsive styles */
 @media (max-width: 1200px) {
-    #portfolio-content {
-        max-width: 95%;
-    }
-
     .portfolio-group {
         width: 31.3%;
-        margin: 1% auto;
+        margin: 1%;
     }
 }
 
 @media (max-width: 900px) {
     .portfolio-group {
-        width: 46%;
-        margin: 1.5% auto;
+        width: 48%;
+        margin: 1%;
     }
 }
 
-/* Sur mobile, afficher 2 images par ligne et rétrécir les images */
+/* Sur mobile - forcer 2 images par ligne */
 @media (max-width: 600px) {
+    #portfolio-content {
+        gap: 8px;
+    }
     .portfolio-group {
         width: 48%;
         margin: 1% 1% 10px 1%;
+        padding: 8px;
     }
 
-    /* Ici on réduit la taille réelle des images pour qu'elles tiennent bien côte à côte */
     .portfolio-group img {
-        width: 100%;  /* s'adapte au conteneur */
-        max-width: 280px; /* limite max la taille */
+        width: 100%;
+        max-width: 100%;
         height: auto;
         display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .portfolio-group .btn {
-        padding: 10px 20px;
-        font-size: 1.1em;
+        border-radius: 5px;
     }
 }
 
+/* Petits écrans - ajustements texte */
 @media (max-width: 400px) {
     nav.main-nav #logo a {
         font-size: 1.1em;
@@ -176,6 +135,7 @@ http://www.templatemo.com/tm-413-flip-turn
     }
 }
 
+/* Le reste de ton CSS, inchangé */
 .profile-pic {
     display: flex;
     align-items: center;
@@ -311,6 +271,7 @@ audio {
 }
 
 /* Pas besoin de toucher à .titre-cursive, .profile-pic-centered, ni .custom-audio-player */
+
 
 
 

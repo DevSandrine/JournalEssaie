@@ -20,6 +20,7 @@ http://www.templatemo.com/tm-413-flip-turn
 
 	<style>
 		/* Pagination style */
+/* Pagination style */
 .pagination {
     clear: both;
     text-align: center;
@@ -120,7 +121,6 @@ http://www.templatemo.com/tm-413-flip-turn
 }
 
 /* Responsive styles */
-
 @media (max-width: 1200px) {
     #portfolio-content {
         max-width: 95%;
@@ -139,11 +139,21 @@ http://www.templatemo.com/tm-413-flip-turn
     }
 }
 
-/* Passage à 2 images par ligne sur mobile */
+/* Sur mobile, afficher 2 images par ligne et rétrécir les images */
 @media (max-width: 600px) {
     .portfolio-group {
         width: 48%;
         margin: 1% 1% 10px 1%;
+    }
+
+    /* Ici on réduit la taille réelle des images pour qu'elles tiennent bien côte à côte */
+    .portfolio-group img {
+        width: 100%;  /* s'adapte au conteneur */
+        max-width: 280px; /* limite max la taille */
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .portfolio-group .btn {
@@ -240,7 +250,6 @@ http://www.templatemo.com/tm-413-flip-turn
 }
 
 /*music*/
-
 .custom-audio-player {
     display: flex;
     align-items: center;
@@ -293,7 +302,6 @@ audio {
 }
 
 /*background*/
-
 .top-header {
     background-image: url('https://images.unsplash.com/photo-1485498128961-422168ba5f87?q=80&w=2130&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
@@ -303,6 +311,7 @@ audio {
 }
 
 /* Pas besoin de toucher à .titre-cursive, .profile-pic-centered, ni .custom-audio-player */
+
 
 
 	</style>

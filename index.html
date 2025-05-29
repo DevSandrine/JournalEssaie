@@ -62,27 +62,25 @@ http://www.templatemo.com/tm-413-flip-turn
     flex-wrap: wrap;
     justify-content: center;
     gap: 1%;
-    box-sizing: border-box;
 }
 
 .portfolio-group {
-    box-sizing: border-box;
+    display: block;
     width: 23%;
-    margin: 0.5%;
+    margin: 0.5% auto;
+    box-sizing: border-box;
     text-align: center;
     vertical-align: top;
-    background: white;
-    padding: 10px;
-    border-radius: 5px;
-    overflow: hidden;
+    aspect-ratio: 1 / 1; /* carré parfait */
 }
 
 .portfolio-group img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* garde proportions et remplit le carré */
     display: block;
-    max-width: 100%;
-    border-radius: 5px;
+    margin-bottom: 8px;
+    border-radius: 5px; /* optionnel, pour arrondir un peu */
 }
 
 .portfolio-group .detail {
@@ -102,8 +100,13 @@ http://www.templatemo.com/tm-413-flip-turn
     line-height: 1.3em;
     margin-bottom: 8px;
     font-weight: normal;
+    text-align: center;         /* centré */
+    word-spacing: normal;       /* espace normal entre mots */
+    hyphens: auto;              /* coupures automatiques */
+    word-break: break-word;     /* éviter débordements */
 }
 
+/* Boutons */
 .portfolio-group .btn {
     display: inline-block;
     margin-top: 5px;
@@ -133,48 +136,33 @@ http://www.templatemo.com/tm-413-flip-turn
 
     .portfolio-group {
         width: 31.3%;
-        margin: 1%;
     }
 }
 
 @media (max-width: 900px) {
     .portfolio-group {
-        width: 48%;
-        margin: 1%;
+        width: 46%;
     }
 }
 
 @media (max-width: 600px) {
-    #portfolio-content {
-        gap: 6px;
-    }
     .portfolio-group {
-        width: 45%;
-        margin: 1% 1% 10px 1%;
-        padding: 6px;
-    }
-
-    .portfolio-group img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        border-radius: 5px;
+        width: 48%;          /* environ 2 par ligne */
+        margin: 1% 1%;      /* espace un peu partout */
+        aspect-ratio: 1 / 1; /* garder carré */
     }
 
     .portfolio-group .detail h3 {
-        font-size: 0.9em;
-        margin: 4px 0;
+        font-size: 1em;      /* réduire légèrement */
     }
 
     .portfolio-group .detail p {
-        font-size: 0.75em;
-        line-height: 1.2em;
-        margin-bottom: 6px;
+        font-size: 0.85em;   /* réduire légèrement */
     }
 
     .portfolio-group .btn {
-        padding: 5px 8px;
-        font-size: 0.8em;
+        padding: 8px 15px;
+        font-size: 1em;
     }
 }
 
@@ -189,6 +177,24 @@ http://www.templatemo.com/tm-413-flip-turn
 
     header h2 {
         font-size: 1em;
+    }
+
+    .portfolio-group {
+        width: 48%;
+        margin: 1% 1%;
+    }
+
+    .portfolio-group .detail h3 {
+        font-size: 0.95em;
+    }
+
+    .portfolio-group .detail p {
+        font-size: 0.8em;
+    }
+
+    .portfolio-group .btn {
+        padding: 7px 14px;
+        font-size: 0.95em;
     }
 }
 
@@ -224,7 +230,7 @@ http://www.templatemo.com/tm-413-flip-turn
     color: #ffffff;
 }
 
-/* Pour la photo centrée */
+/* Pour la photo centrée en cercle */
 .profile-pic-centered {
     width: 150px;
     height: 150px;
@@ -245,7 +251,7 @@ http://www.templatemo.com/tm-413-flip-turn
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive : réduire un peu la taille sur petits écrans */
+/* Responsive profile pic */
 @media (max-width: 600px) {
     .name-title {
         font-size: 1.4em;
@@ -253,6 +259,7 @@ http://www.templatemo.com/tm-413-flip-turn
 
     .profile-pic-centered {
         max-width: 120px;
+        max-height: 120px;
     }
 }
 
@@ -263,10 +270,11 @@ http://www.templatemo.com/tm-413-flip-turn
 
     .profile-pic-centered {
         max-width: 100px;
+        max-height: 100px;
     }
 }
 
-/* Music player styles */
+/* Music player */
 .custom-audio-player {
     display: flex;
     align-items: center;
@@ -318,7 +326,7 @@ audio {
     cursor: pointer;
 }
 
-/* Background header */
+/* Background */
 .top-header {
     background-image: url('https://images.unsplash.com/photo-1485498128961-422168ba5f87?q=80&w=2130&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
@@ -328,8 +336,6 @@ audio {
 }
 
 /* Pas besoin de toucher à .titre-cursive, .profile-pic-centered, ni .custom-audio-player */
-
-
 
 
 

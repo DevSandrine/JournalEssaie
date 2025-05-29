@@ -85,8 +85,52 @@ http://www.templatemo.com/tm-413-flip-turn
     border-radius: 5px;
 }
 
+.portfolio-group .detail {
+    padding: 0 5px;
+}
+
+.portfolio-group .detail h3 {
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #333;
+    font-weight: normal;
+}
+
+.portfolio-group .detail p {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.3em;
+    margin-bottom: 8px;
+    font-weight: normal;
+}
+
+.portfolio-group .btn {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 6px 12px;
+    background-color: white;
+    color: black;
+    font-weight: normal;
+    cursor: pointer;
+    border-radius: 3px;
+    text-align: center;
+    user-select: none;
+    border: 1px solid black;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-group .btn:hover {
+    background-color: #d3d3d3;
+    color: black;
+}
+
 /* Responsive styles */
+
 @media (max-width: 1200px) {
+    #portfolio-content {
+        max-width: 95%;
+    }
+
     .portfolio-group {
         width: 31.3%;
         margin: 1%;
@@ -100,27 +144,40 @@ http://www.templatemo.com/tm-413-flip-turn
     }
 }
 
-/* Sur mobile - forcer 2 images par ligne */
 @media (max-width: 600px) {
     #portfolio-content {
-        gap: 8px;
+        gap: 6px;
     }
     .portfolio-group {
-        width: 48%;
+        width: 45%;
         margin: 1% 1% 10px 1%;
-        padding: 8px;
+        padding: 6px;
     }
 
     .portfolio-group img {
         width: 100%;
         max-width: 100%;
         height: auto;
-        display: block;
         border-radius: 5px;
+    }
+
+    .portfolio-group .detail h3 {
+        font-size: 0.9em;
+        margin: 4px 0;
+    }
+
+    .portfolio-group .detail p {
+        font-size: 0.75em;
+        line-height: 1.2em;
+        margin-bottom: 6px;
+    }
+
+    .portfolio-group .btn {
+        padding: 5px 8px;
+        font-size: 0.8em;
     }
 }
 
-/* Petits écrans - ajustements texte */
 @media (max-width: 400px) {
     nav.main-nav #logo a {
         font-size: 1.1em;
@@ -135,7 +192,7 @@ http://www.templatemo.com/tm-413-flip-turn
     }
 }
 
-/* Le reste de ton CSS, inchangé */
+/* Profile picture styles */
 .profile-pic {
     display: flex;
     align-items: center;
@@ -167,7 +224,7 @@ http://www.templatemo.com/tm-413-flip-turn
     color: #ffffff;
 }
 
-/* Pour la photo : */
+/* Pour la photo centrée */
 .profile-pic-centered {
     width: 150px;
     height: 150px;
@@ -209,7 +266,7 @@ http://www.templatemo.com/tm-413-flip-turn
     }
 }
 
-/*music*/
+/* Music player styles */
 .custom-audio-player {
     display: flex;
     align-items: center;
@@ -261,7 +318,7 @@ audio {
     cursor: pointer;
 }
 
-/*background*/
+/* Background header */
 .top-header {
     background-image: url('https://images.unsplash.com/photo-1485498128961-422168ba5f87?q=80&w=2130&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
@@ -271,6 +328,7 @@ audio {
 }
 
 /* Pas besoin de toucher à .titre-cursive, .profile-pic-centered, ni .custom-audio-player */
+
 
 
 

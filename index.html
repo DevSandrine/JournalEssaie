@@ -326,22 +326,35 @@ padding: 20px;
 border-radius: 15px;
 }
 
-		.sound-mini{
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    background: rgba(255, 210, 225, 0.75);
-    border: none;
-    border-radius: 50%;
-    width: 26px;
-    height: 26px;
-    font-size: 12px;
+
+
+/* sound*/
+		
+.mini-audio-custom{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 70px;
+    padding: 4px 8px;
+    margin: 6px 0;
+    background: rgba(255, 200, 220, 0.6);
+    border-radius: 20px;
     cursor: pointer;
-    backdrop-filter: blur(4px);
+    font-size: 12px;
+    user-select: none;
 }
-.portfolio-group{
-    position: relative;
+
+.mini-audio-custom span:first-child{
+    font-size: 12px;
 }
+
+.bar{
+    flex: 1;
+    height: 3px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 2px;
+}
+	
 		
 
 /* Pas besoin de toucher à .titre-cursive, .profile-pic-centered, ni .custom-audio-player */
@@ -387,11 +400,16 @@ border-radius: 15px;
 					<div class="detail">  
 						<h3>Coucher de soleil</h3> 
 
- <!-- bouton son -->
-        <button class="sound-mini"
-            onclick="playSound('logandu13-sunset-vibes-198338.mp3')">
-            ▶
-		</button>
+   <div class="mini-audio-custom" onclick="toggleAudio(this)">
+        <span>▶</span>
+        <span class="bar"></span>
+    </div>
+
+    <audio class="audio-source">
+        <source src="logandu13-sunset-vibes-198338.mp3" type="audio/mpeg">
+    </audio>
+
+    
 						<p>  
 							Debout face à l'horizon,
 
@@ -653,17 +671,16 @@ Où chaque arrêt est un plan, chaque regard un scénario.
 	<audio id="audio-player"></audio>
 
 <script>
-function playSound(src){
-    const audio = document.getElementById("audio-player");
+function toggleAudio(el){
+    const audio = el.parentElement.querySelector(".audio-source");
 
-    // si même son → pause / toggle
-    if(audio.src.includes(src) && !audio.paused){
+    if(audio.paused){
+        audio.play();
+        el.querySelector("span").innerHTML = "❚❚";
+    } else {
         audio.pause();
-        return;
+        el.querySelector("span").innerHTML = "▶";
     }
-
-    audio.src = src;
-    audio.play();
 }
 </script>
 

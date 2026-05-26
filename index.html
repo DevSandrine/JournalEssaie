@@ -7,18 +7,20 @@ http://www.templatemo.com/tm-413-flip-turn
 
 <head>
 	<title>Sandrine Devaradja</title>
+
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css" />
 	<link href="font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<link href="magnific-popup.css" rel="stylesheet" />
 	<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
-
 	<style>
+
 /* Pagination style */
 .pagination {
     clear: both;
@@ -124,99 +126,23 @@ http://www.templatemo.com/tm-413-flip-turn
     color: black;
 }
 
-/* Responsive styles */
-
-@media (max-width: 1200px) {
-    #portfolio-content {
-        max-width: 95%;
-    }
-
-    .portfolio-group {
-        width: 31.3%;
-        margin: 1%;
-    }
+/* Audio */
+.photo-audio {
+    width: 100%;
+    margin-top: 8px;
 }
 
-@media (max-width: 900px) {
-    .portfolio-group {
-        width: 48%;
-        margin: 1%;
-    }
-}
-
-@media (max-width: 600px) {
-    #portfolio-content {
-        gap: 6px;
-    }
-    .portfolio-group {
-        width: 45%;
-        margin: 1% 1% 10px 1%;
-        padding: 6px;
-    }
-
-    .portfolio-group img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        border-radius: 5px;
-    }
-
-    .portfolio-group .detail h3 {
-        font-size: 0.9em;
-        margin: 4px 0;
-    }
-
-    .portfolio-group .detail p {
-        font-size: 0.75em;
-        line-height: 1.2em;
-        margin-bottom: 6px;
-    }
-
-    .portfolio-group .btn {
-        padding: 5px 8px;
-        font-size: 0.8em;
-    }
-}
-
-@media (max-width: 400px) {
-    nav.main-nav #logo a {
-        font-size: 1.1em;
-    }
-
-    header h1 {
-        font-size: 1.8em;
-    }
-
-    header h2 {
-        font-size: 1em;
-    }
-}
-
-/* Profile picture styles */
-.profile-pic {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    padding-right: 20px;
-}
-
-.profile-pic img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #999;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Conteneur du header centré */
+/* Header */
 .top-header {
+    background-image: url('https://images.unsplash.com/photo-1485498128961-422168ba5f87?q=80&w=2130&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 15px;
     text-align: center;
     margin: 20px 0;
 }
 
-/* Titre du nom centré, plus petit que le h1 par défaut, même police et couleur */
 .titre-cursive {
     font-family: 'Dancing Script', cursive;
     font-size: 3em;
@@ -224,7 +150,6 @@ http://www.templatemo.com/tm-413-flip-turn
     color: #ffffff;
 }
 
-/* Pour la photo centrée */
 .profile-pic-centered {
     width: 150px;
     height: 150px;
@@ -245,28 +170,7 @@ http://www.templatemo.com/tm-413-flip-turn
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive : réduire un peu la taille sur petits écrans */
-@media (max-width: 600px) {
-    .name-title {
-        font-size: 1.4em;
-    }
-
-    .profile-pic-centered {
-        max-width: 120px;
-    }
-}
-
-@media (max-width: 400px) {
-    .name-title {
-        font-size: 1.2em;
-    }
-
-    .profile-pic-centered {
-        max-width: 100px;
-    }
-}
-
-/* Music player styles */
+/* Music player */
 .custom-audio-player {
     display: flex;
     align-items: center;
@@ -274,14 +178,7 @@ http://www.templatemo.com/tm-413-flip-turn
     margin: 15px auto;
     background: linear-gradient(135deg, rgba(255, 249, 230, 0.6), rgba(255, 230, 235, 0.6));
     border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(255, 220, 180, 0.15);
     padding: 10px 12px;
-    backdrop-filter: blur(5px);
-    transition: box-shadow 0.3s ease;
-}
-
-.custom-audio-player:hover {
-    box-shadow: 0 8px 18px rgba(255, 220, 180, 0.3);
 }
 
 .cover-art {
@@ -289,362 +186,138 @@ http://www.templatemo.com/tm-413-flip-turn
     height: 42px;
     border-radius: 12px;
     margin-right: 8px;
-    flex-shrink: 0;
-    box-shadow: 0 2px 6px rgba(255, 220, 180, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.custom-audio-player:hover .cover-art {
-    transform: scale(1.05);
 }
 
 .track-info {
     flex-grow: 1;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .track-info h3 {
     font-size: 0.95em;
     margin: 0 0 5px;
     color: #d8a29e;
-    font-weight: 600;
-    text-shadow: 0 1px 1px rgba(255, 250, 245, 0.6);
 }
 
 audio {
     width: 100%;
-    outline: none;
-    filter: drop-shadow(0 1px 1px rgba(255, 220, 180, 0.1));
-    cursor: pointer;
 }
 
-/* Background header */
-.top-header {
-    background-image: url('https://images.unsplash.com/photo-1485498128961-422168ba5f87?q=80&w=2130&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-    border-radius: 15px;
+/* Responsive */
 
-
-	.photo-audio {
-    width: 100%;
-    margin-top: 8px;
-	}
+@media (max-width: 900px) {
+    .portfolio-group {
+        width: 48%;
+    }
 }
 
-/* Pas besoin de toucher à .titre-cursive, .profile-pic-centered, ni .custom-audio-player */ 
+@media (max-width: 600px) {
+    .portfolio-group {
+        width: 45%;
+    }
+}
+
 	</style>
 </head>
 
 <body>
-	<div class="main-container">
-  <header class="top-header">
+
+<div class="main-container">
+
+<header class="top-header">
+
     <h1 class="titre-cursive">Sandrine Devaradja📷👒</h1>
+
     <div class="profile-pic-centered">
-      <img src="pp.jpeg" alt="Photo de profil" />
+        <img src="pp.jpeg" alt="Photo de profil" />
     </div>
 
-	   <!-- Ajoute ce lecteur ici -->
-<div class="audio-wrapper">
-  <div class="custom-audio-player">
-    <img src="cover.jpeg" alt="Pochette musique" class="cover-art" />
-    <div class="track-info">
-      <h3>🎵 Adi Penne</h3>
-      <audio controls>
-        <source src="logandu13-sunset-vibes-198338.mp3" type="audio/mpeg" />
-        
-      </audio>
+    <div class="audio-wrapper">
+        <div class="custom-audio-player">
+
+            <img src="cover.jpeg" alt="Pochette musique" class="cover-art" />
+
+            <div class="track-info">
+
+                <h3>🎵 Adi Penne</h3>
+
+                <audio controls>
+                    <source src="AdiPenne.mp3" type="audio/mpeg" />
+                </audio>
+
+            </div>
+        </div>
     </div>
-  </div>
+
+</header>
+
+<div class="content-container">
+
+<header>
+    <h1 class="center-text">Mon journal en images</h1>
+
+    <h2 class="center-text">
+        Chaque photo capture un instant précieux du quotidien,
+        accompagnée d’un mot, d’une pensée légère.
+    </h2>
+</header>
+
+<div id="portfolio-content" class="center-text">
+
+<!-- COUCHER DE SOLEIL -->
+
+<div class="portfolio-group">
+
+    <a class="portfolio-item" href="couchersoleil.jpeg">
+        <img src="couchersoleil.jpeg" alt="image 12" />
+    </a>
+
+    <audio controls class="photo-audio">
+        <source src="logandu13-sunset-vibes-198338.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="detail">
+
+        <h3>Coucher de soleil</h3>
+
+        <p>
+            Debout face à l'horizon,
+            Le jour s’efface doucement,
+            La lumière danse en silence,
+            Et mon âme s’éveille au souffle du soir.
+        </p>
+
+        <span class="btn">View</span>
+
+    </div>
+
 </div>
 
+</div>
 
+</div>
 
-  </header>
+<footer>
+    <p>Copyright &copy; Sandrine Devaradja ❤️</p>
+</footer>
 
-		<div class="content-container">
-			<header>
-				<h1 class="center-text">Mon journal en images</h1>
-				<h2 class="center-text">
-					Chaque photo capture un instant précieux du quotidien, accompagnée
-					d’un mot, d’une pensée légère. Un carnet visuel et écrit, où lumière
-					et émotions se mêlent.
-				</h2>
-			</header>
+</div>
 
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="modernizr.2.5.3.min.js"></script>
+<script type="text/javascript" src="jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="templatemo_script.js"></script>
 
-			<div id="portfolio-content" class="center-text">
-				<!-- Photos du plus récent au plus ancien -->
+<script>
 
-				<div class="portfolio-group">
-					<a class="portfolio-item" href="couchersoleil.jpeg">
-						<img src="couchersoleil.jpeg" alt="image 12" />
-						
-						<!-- Son -->
-		<audio controls class="photo-audio">
-			<source src="logandu13-sunset-vibes-198338.mp3" type="audio/mpeg">
-		</audio>
-						
-						<div class="detail">
-							<h3>Coucher de soleil</h3>
-							<p>
-								Debout face à l'horizon,
-Le jour s’efface doucement,
-La lumière danse en silence,
-Et mon âme s’éveille au souffle du soir.
-							</p>
-							<span class="btn">View</span>
-						</div>
-					</a>
-				</div>
+$(".portfolio-item").magnificPopup({
+	type: "image",
+	gallery: {
+		enabled: true,
+	},
+});
 
-				<div class="portfolio-group">
-					<a class="portfolio-item" href="train.jpeg">
-						<img src="train.jpeg" alt="image 11" />
-						<div class="detail">
-							<h3>Le Cinétrain</h3>
-							<p>
-								Sous les néons tamisés, les murs racontent des histoires,
-Des visages figés, des rêves animés,
-Un voyage entre pellicule et rails,
-Où chaque arrêt est un plan, chaque regard un scénario.
-							</p>
-							<span class="btn">View</span>
-						</div>
-					</a>
-				</div>
-
-				<div class="portfolio-group">
-					<a class="portfolio-item" href="tree.jpeg">
-						<img src="tree.jpeg" alt="image 10" />
-						<div class="detail">
-							<h3>Arbre de 5000 ans</h3>
-							<p>
-								Il veille sans bruit,
-								racines profondes,
-								feuilles pleines de siècles.
-								Le monde change,
-								lui, il se souvient.
-							</p>
-							<span class="btn">View</span>
-						</div>
-					</a>
-				</div>
-
-				<div class="portfolio-group">
-					<a class="portfolio-item" href="clock.jpeg">
-						<img src="clock.jpeg" alt="image 9" />
-						<div class="detail">
-							<h3>L'Horloge de la Gare</h3>
-							<p>
-								Au cœur du quai, le temps s'arrête,
-								Dans le tic-tac d'une attente paisible.
-								Chaque seconde, un voyage s'envole,
-								Sous le regard sage de l'horloge qui console.
-							</p>
-							<span class="btn">View</span>
-						</div>
-					</a>
-				</div>
-
-				<div class="portfolio-group">
-					<a class="portfolio-item" href="bibimbap.jpeg">
-						<img src="bibimbap.jpeg" alt="image 8" />
-						<div class="detail">
-							<h3>Bibimbap indien</h3>
-							<p>
-								Riz et épices se mêlent, couleurs dansent en harmonie, un voyage
-								de saveurs.
-							</p>
-							<span class="btn">View</span>
-						</div>
-					</a>
-				</div>
-
-				<div class="portfolio-group">
-					<a class="portfolio-item" href="dessert.jpeg">
-						<img src="dessert.jpeg" alt="image 7" />
-						<div class="detail">
-							<h3>Petite gourmandise</h3>
-							<p>
-								Un éclat sucré, un petit trésor, un moment doux dans la journée,
-								comme un sourire offert au goût, un plaisir simple et léger.
-							</p>
-							<span class="btn">View</span>
-						</div>
-					</a>
-				</div>
-
-				<div class="portfolio-group">
-					<a class="portfolio-item" href="Fontaine.jpeg">
-						<img src="Fontaine.jpeg" alt="image 6" />
-						<div class="detail">
-							<h3>La fontaine de la connaissance</h3>
-							<p>
-								Une fontaine claire murmure, offrant un savoir précieux, que
-								l’on boit avec respect, et qui coule sans fin.
-							</p>
-							<span class="btn">View</span>
-						</div>
-					</a>
-				</div>
-
-				<div class="portfolio-group">
-					<a class="portfolio-item" href="Arabis.jpeg">
-						<img src="Arabis.jpeg" alt="image 5" />
-						<div class="detail">
-							<h3>Arabis procurrens/Arabette rampante</h3>
-							<p>
-								Un tendre tapis au sol, éclat subtil du printemps. Fleurs
-								légères en éveil, vibrant au souffle du vent.
-							</p>
-							<span class="btn">View</span>
-						</div>
-					</a>
-				</div>
-
-				<div class="portfolio-group">
-					<a class="portfolio-item" href="lilac.jpeg">
-						<img src="lilac.jpeg" alt="image 4" />
-						<div class="detail">
-							<h3>Syringa / Lilas</h3>
-							<p>
-								Il suffit d’un souffle, et le passé s’éveille. Dans l’ombre douce
-								des jardins, le lilas parle à voix basse, et tout s’incline à sa
-								mémoire.
-							</p>
-							<span class="btn">View</span>
-						</div>
-					</a>
-				</div>
-
-				<div class="portfolio-group">
-					<a class="portfolio-item" href="dogwood.jpeg">
-						<img src="dogwood.jpeg" alt="image 3" />
-						<div class="detail">
-							<h3>Cornus florida/Cornouiller</h3>
-							<p>
-								Sur les branches tendues au ciel, Des croix de soie, calmes et
-								claires, Comme un silence originel, La prière d’un arbre en
-								lumière.
-							</p>
-							<span class="btn">View</span>
-						</div>
-					</a>
-				</div>
-
-				<div class="portfolio-group">
-					<a class="portfolio-item" href="primrose.jpeg">
-						<img src="primrose.jpeg" alt="image 2" />
-						<div class="detail">
-							<h3>Primula/Primevère Rouge</h3>
-							<p>
-								Rouge éclat sur l’herbe frêle, Cœur soleil en robe de feu. Dans
-								le matin qui se révèle, Elle dit l’amour, simple et silencieux.
-							</p>
-							<span class="btn">View</span>
-						</div>
-					</a>
-				</div>
-
-				<div class="portfolio-group">
-					<a class="portfolio-item" href="prunelleGrise.jpeg">
-						<img src="prunelleGrise.jpeg" alt="image 1" />
-						<div class="detail">
-							<h3>Prunus spinosa/ Prunelle Grise</h3>
-							<p>
-								Silence perle au creux du matin, Sous la brume, un éclat feutré,
-								La fleur s’ouvre sans bruit ni fin, Son cœur d’ombre doucement
-								voilé.
-							</p>
-							<span class="btn">View</span>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<div class="pagination">
-				<ul class="nav" id="pagination-controls"></ul>
-			</div>
-		</div>
-		<!-- /.content-container -->
-		<footer>
-			<p>Copyright &copy; Sandrine Devaradja ❤️</p>
-		</footer>
-	</div>
-
-	<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="modernizr.2.5.3.min.js"></script>
-	<script type="text/javascript" src="jquery.magnific-popup.min.js"></script>
-	<script type="text/javascript" src="templatemo_script.js"></script>
-
-	<script>
-		const photosPerPage = 8;
-		const photoGroups = document.querySelectorAll("#portfolio-content .portfolio-group");
-		const paginationContainer = document.getElementById("pagination-controls");
-		let currentPage = 1;
-		const totalPages = Math.ceil(photoGroups.length / photosPerPage);
-
-		function showPage(page) {
-			currentPage = page;
-			const start = (page - 1) * photosPerPage;
-			const end = start + photosPerPage;
-
-			photoGroups.forEach((pg, index) => {
-				pg.style.display = index >= start && index < end ? "block" : "none";
-			});
-
-			renderPagination();
-		}
-
-		function renderPagination() {
-			paginationContainer.innerHTML = "";
-
-			// Flèche précédente
-			const prev = document.createElement("li");
-			prev.textContent = "«";
-			prev.className = currentPage === 1 ? "disabled" : "";
-			prev.onclick = () => {
-				if (currentPage > 1) showPage(currentPage - 1);
-			};
-			paginationContainer.appendChild(prev);
-
-			// Numéros de page
-			for (let i = 1; i <= totalPages; i++) {
-				const li = document.createElement("li");
-				li.textContent = i;
-				li.className = i === currentPage ? "active" : "";
-				li.onclick = () => showPage(i);
-				paginationContainer.appendChild(li);
-			}
-
-			// Flèche suivante
-			const next = document.createElement("li");
-			next.textContent = "»";
-			next.className = currentPage === totalPages ? "disabled" : "";
-			next.onclick = () => {
-				if (currentPage < totalPages) showPage(currentPage + 1);
-			};
-			paginationContainer.appendChild(next);
-		}
-
-		document.addEventListener("DOMContentLoaded", () => {
-			showPage(1);
-
-			$(".portfolio-item").magnificPopup({
-				type: "image",
-				gallery: {
-					enabled: true,
-				},
-			});
-		});
-	</script>
-
-	<!----video script>
-
+</script>
 
 </body>
-
 </html>

@@ -149,18 +149,12 @@
         <div class="portfolio-group">
 
             <a href="couchersoleil.jpeg" target="_blank">
-                <img src="couchersoleil.jpeg" alt="Coucher de soleil">
+                <img src="couchersoleil.jpeg" alt="Coucher de soleil"
+                    onclick="playSound('audio2')" style="cursor:pointer;">
             </a>
 
             <!-- AUDIO -->
-
-            <div class="audio-container">
-
-                <audio controls>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-                </audio>
-
-            </div>
+<audio id="audio2" src="logandu13-sunset-vibes-198338.mp3"></audio>
 
             <!-- TEXTE -->
 
@@ -182,7 +176,13 @@
         </div>
 
     </div>
-
+<script>
+function playSound(id) {
+    const audio = document.getElementById(id);
+    audio.currentTime = 0;
+    audio.play();
+}
+</script>
 </body>
 
 </html>

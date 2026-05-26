@@ -330,20 +330,21 @@ border-radius: 15px;
 
 		
 	.sound-btn{
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.6);
     border: none;
     border-radius: 50%;
-    width: 26px;
-    height: 26px;
-    font-size: 12px;
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
     cursor: pointer;
-    margin-top: 6px;
+    margin-top: 5px;
+    opacity: 0.8;
     transition: 0.2s;
 }
 
 .sound-btn:hover{
-    transform: scale(1.08);
-    background: rgba(255,255,255,0.9);
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 /* Pas besoin de toucher à .titre-cursive, .profile-pic-centered, ni .custom-audio-player */
@@ -653,6 +654,20 @@ Où chaque arrêt est un plan, chaque regard un scénario.
 		});  
 	});  
 </script>  
+
+	<script>
+const audio = document.getElementById("sunset-audio");
+
+function toggleSound(btn){
+    if (audio.paused) {
+        audio.play();
+        btn.innerHTML = "❚❚"; // pause
+    } else {
+        audio.pause();
+        btn.innerHTML = "▶️"; // play
+    }
+}
+	</script>
 
 
 

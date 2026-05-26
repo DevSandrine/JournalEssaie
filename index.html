@@ -347,6 +347,40 @@ border-radius: 15px;
     transform: scale(1.1);
 }
 
+
+		
+
+
+		.audio-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0;
+}
+
+.audio-box audio{
+    width: 120px;
+    height: 28px;
+    opacity: 0.85;
+}
+
+.audio-box button{
+    border: none;
+    background: rgba(255, 200, 220, 0.75); /* rose léger */
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.audio-box button:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
 /* Pas besoin de toucher à .titre-cursive, .profile-pic-centered, ni .custom-audio-player */
 </style>
 
@@ -390,13 +424,13 @@ border-radius: 15px;
 					<div class="detail">  
 						<h3>Coucher de soleil</h3> 
 
-		<audio id="sunset-audio">
-    <source src="logandu13-sunset-vibes-198338.mp3" type="audio/mpeg">
-</audio>
+		<div class="audio-box">
+    <audio>
+        <source src="logandu13-sunset-vibes-198338.mp3" type="audio/mpeg">
+    </audio>
 
-<button class="sound-btn" onclick="toggleSound(this)">
-    ▶️
-</button>
+    <button onclick="toggleAudio(this)">▶</button>
+		</div>
 						<p>  
 							Debout face à l'horizon,
 
@@ -655,19 +689,20 @@ Où chaque arrêt est un plan, chaque regard un scénario.
 	});  
 </script>  
 
-	<script>
-const audio = document.getElementById("sunset-audio");
+	
+<script>
+function toggleAudio(btn){
+    const audio = btn.parentElement.querySelector("audio");
 
-function toggleSound(btn){
-    if (audio.paused) {
+    if(audio.paused){
         audio.play();
-        btn.innerHTML = "❚❚"; // pause
+        btn.innerHTML = "❚❚";
     } else {
         audio.pause();
-        btn.innerHTML = "▶️"; // play
+        btn.innerHTML = "▶";
     }
 }
-	</script>
+</script>
 
 
 

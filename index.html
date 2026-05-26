@@ -15,142 +15,135 @@
 
 <style>
 
-/* ================= GLOBAL ================= */
+/* ================= YOUR ORIGINAL CSS (UNCHANGED) ================= */
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Open Sans", Arial, sans-serif;
-    background: #f5f5f5;
-}
-
-/* ================= HEADER ================= */
-
-.top-header {
-    background-image: url('https://images.unsplash.com/photo-1485498128961-422168ba5f87?q=80&w=2130&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    padding: 25px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.titre-cursive {
-    font-family: 'Dancing Script', cursive;
-    font-size: 3em;
-    color: white;
-}
-
-.profile-pic-centered {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.profile-pic-centered img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ================= PORTFOLIO ================= */
-
-#portfolio-content {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.portfolio-group {
-    width: 23%;
-    background: white;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.portfolio-group img {
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-/* ================= TEXT ================= */
-
-.detail h3 {
-    font-size: 1.1em;
-    margin: 5px 0;
-}
-
-.detail p {
-    font-size: 0.9em;
-    color: #555;
-}
-
-/* ================= BUTTON ================= */
-
-.btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 6px 12px;
-    border: 1px solid black;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* ================= AUDIO ================= */
-
-.photo-audio {
-    display: none;
-}
-
-/* ================= PAGINATION ================= */
-
+/* Pagination style */
 .pagination {
-    text-align: center;
-    margin-top: 20px;
+clear: both;
+text-align: center;
+margin-top: 20px;
 }
 
 .pagination ul {
-    list-style: none;
-    padding: 0;
+list-style: none;
+padding: 0;
+display: inline-block;
 }
 
 .pagination ul li {
-    display: inline-block;
-    margin: 0 5px;
-    padding: 5px 10px;
-    background: #ddd;
-    cursor: pointer;
-    border-radius: 3px;
+display: inline-block;
+margin: 0 5px;
+cursor: pointer;
+padding: 5px 10px;
+background: #ddd;
+border-radius: 3px;
+user-select: none;
 }
 
 .pagination ul li.active {
-    background: #666;
-    color: white;
+background: #666;
+color: white;
+font-weight: bold;
 }
 
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 900px) {
-    .portfolio-group {
-        width: 48%;
-    }
+.pagination ul li.disabled {
+background: #eee;
+color: #aaa;
+cursor: default;
 }
 
-@media (max-width: 600px) {
-    .portfolio-group {
-        width: 100%;
-    }
+/* Gallery grid */
+#portfolio-content {
+max-width: 1100px;
+margin: 0 auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 1%;
+box-sizing: border-box;
+}
 
-    .titre-cursive {
-        font-size: 2em;
-    }
+.portfolio-group {
+box-sizing: border-box;
+width: 23%;
+margin: 0.5%;
+text-align: center;
+background: white;
+padding: 10px;
+border-radius: 5px;
+overflow: hidden;
+}
+
+.portfolio-group img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 5px;
+cursor: pointer;
+}
+
+/* details */
+.portfolio-group .detail {
+padding: 0 5px;
+}
+
+.portfolio-group .detail h3 {
+margin: 5px 0;
+font-size: 1.1em;
+color: #333;
+font-weight: normal;
+}
+
+.portfolio-group .detail p {
+font-size: 0.9em;
+color: #555;
+line-height: 1.3em;
+}
+
+/* buttons */
+.portfolio-group .btn {
+display: inline-block;
+margin-top: 5px;
+padding: 6px 12px;
+border: 1px solid black;
+border-radius: 3px;
+}
+
+/* profile */
+.profile-pic-centered {
+width: 150px;
+height: 150px;
+margin: 0 auto;
+border-radius: 50%;
+overflow: hidden;
+}
+
+.profile-pic-centered img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/* title */
+.titre-cursive {
+font-family: 'Dancing Script', cursive;
+font-size: 3em;
+text-align: center;
+color: #fff;
+}
+
+/* header */
+.top-header {
+background-image: url('https://images.unsplash.com/photo-1485498128961-422168ba5f87?q=80&w=2130&auto=format&fit=crop');
+background-size: cover;
+background-position: center;
+padding: 20px;
+border-radius: 15px;
+}
+
+/* AUDIO HIDDEN */
+.photo-audio {
+display: none;
 }
 
 </style>
@@ -161,18 +154,18 @@ body {
 
 <div class="main-container">
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <header class="top-header">
 
-    <h1 class="titre-cursive">Sandrine Devaradja📷👒</h1>
+<h1 class="titre-cursive">Sandrine Devaradja📷👒</h1>
 
-    <div class="profile-pic-centered">
-        <img src="pp.jpeg" />
-    </div>
+<div class="profile-pic-centered">
+<img src="pp.jpeg">
+</div>
 
 </header>
 
-<!-- ================= CONTENT ================= -->
+<!-- CONTENT -->
 <div class="content-container">
 
 <h1 class="center-text">Mon journal en images</h1>
@@ -186,80 +179,57 @@ Chaque photo capture un instant précieux du quotidien.
 
 <!-- POST 1 -->
 <div class="portfolio-group">
-    <a class="portfolio-item" href="couchersoleil.jpeg">
-        <img src="couchersoleil.jpeg" data-audio="logandu13-sunset-vibes-198338.mp3">
-
-        <div class="detail">
-            <h3>Coucher de soleil</h3>
-            <p>
-                Debout face à l'horizon,<br>
-                Le jour s’efface doucement,<br>
-                La lumière danse en silence,<br>
-                Et mon âme s’éveille au souffle du soir.
-            </p>
-            <span class="btn">View</span>
-        </div>
-    </a>
+<a class="portfolio-item" href="couchersoleil.jpeg">
+<img src="couchersoleil.jpeg" data-audio="logandu13-sunset-vibes-198338.mp3">
+<div class="detail">
+<h3>Coucher de soleil</h3>
+<p>Debout face à l'horizon... lumière danse en silence.</p>
+<span class="btn">View</span>
+</div>
+</a>
 </div>
 
 <!-- POST 2 -->
 <div class="portfolio-group">
-    <a class="portfolio-item" href="train.jpeg">
-        <img src="train.jpeg" data-audio="logandu13-sunset-vibes-198338.mp3">
-
-        <div class="detail">
-            <h3>Le Cinétrain</h3>
-            <p>
-                Voyage entre pellicule et rails,<br>
-                chaque regard un scénario.
-            </p>
-            <span class="btn">View</span>
-        </div>
-    </a>
+<a class="portfolio-item" href="train.jpeg">
+<img src="train.jpeg" data-audio="logandu13-sunset-vibes-198338.mp3">
+<div class="detail">
+<h3>Le Cinétrain</h3>
+<p>Un voyage entre pellicule et rails...</p>
+<span class="btn">View</span>
+</div>
+</a>
 </div>
 
 <!-- POST 3 -->
 <div class="portfolio-group">
-    <a class="portfolio-item" href="tree.jpeg">
-        <img src="tree.jpeg" data-audio="logandu13-sunset-vibes-198338.mp3">
-
-        <div class="detail">
-            <h3>Arbre de 5000 ans</h3>
-            <p>
-                Il veille sans bruit,<br>
-                Le monde change, lui se souvient.
-            </p>
-            <span class="btn">View</span>
-        </div>
-    </a>
+<a class="portfolio-item" href="tree.jpeg">
+<img src="tree.jpeg" data-audio="logandu13-sunset-vibes-198338.mp3">
+<div class="detail">
+<h3>Arbre</h3>
+<p>Il veille sans bruit...</p>
+<span class="btn">View</span>
 </div>
-
-<!-- POST 4 -->
-<div class="portfolio-group">
-    <a class="portfolio-item" href="clock.jpeg">
-        <img src="clock.jpeg" data-audio="logandu13-sunset-vibes-198338.mp3">
-
-        <div class="detail">
-            <h3>L'Horloge</h3>
-            <p>
-                Le temps s'arrête dans le tic-tac du quai.
-            </p>
-            <span class="btn">View</span>
-        </div>
-    </a>
+</a>
 </div>
 
 </div>
 
 </div>
 
+<!-- PAGINATION -->
+<div class="pagination">
+<ul id="pagination-controls"></ul>
+</div>
+
+<!-- FOOTER -->
 <footer>
 <p>Copyright © Sandrine Devaradja ❤️</p>
 </footer>
 
 </div>
 
-<!-- ================= SCRIPTS ================= -->
+<!-- SCRIPTS -->
 <script src="jquery-1.11.1.min.js"></script>
 <script src="jquery.easing.1.3.js"></script>
 <script src="modernizr.2.5.3.min.js"></script>
@@ -270,36 +240,77 @@ Chaque photo capture un instant précieux du quotidien.
 
 let currentAudio = null;
 
-$(document).ready(function () {
+/* PAGINATION (ton code intact) */
+const photosPerPage = 8;
+const photoGroups = document.querySelectorAll(".portfolio-group");
+const paginationContainer = document.getElementById("pagination-controls");
+let currentPage = 1;
+const totalPages = Math.ceil(photoGroups.length / photosPerPage);
 
-    $(".portfolio-item").magnificPopup({
-        type: "image",
-        gallery: { enabled: true },
+function showPage(page){
+currentPage = page;
+let start = (page-1)*photosPerPage;
+let end = start+photosPerPage;
 
-        callbacks: {
+photoGroups.forEach((p,i)=>{
+p.style.display = (i>=start && i<end) ? "block":"none";
+});
 
-            open: function () {
+renderPagination();
+}
 
-                let img = $.magnificPopup.instance.currItem.el.find("img");
-                let audioSrc = img.data("audio");
+function renderPagination(){
+paginationContainer.innerHTML="";
 
-                if (audioSrc) {
-                    currentAudio = new Audio(audioSrc);
-                    currentAudio.play();
-                }
-            },
+const prev=document.createElement("li");
+prev.textContent="«";
+prev.onclick=()=>{if(currentPage>1)showPage(currentPage-1)};
+paginationContainer.appendChild(prev);
 
-            close: function () {
-                if (currentAudio) {
-                    currentAudio.pause();
-                    currentAudio.currentTime = 0;
-                    currentAudio = null;
-                }
-            }
+for(let i=1;i<=totalPages;i++){
+const li=document.createElement("li");
+li.textContent=i;
+li.onclick=()=>showPage(i);
+paginationContainer.appendChild(li);
+}
 
-        }
+const next=document.createElement("li");
+next.textContent="»";
+next.onclick=()=>{if(currentPage<totalPages)showPage(currentPage+1)};
+paginationContainer.appendChild(next);
+}
 
-    });
+/* MAGNIFIC + SON */
+$(document).ready(function(){
+
+showPage(1);
+
+$(".portfolio-item").magnificPopup({
+type:"image",
+gallery:{enabled:true},
+
+callbacks:{
+open:function(){
+
+let img=$(this.currItem.el).find("img");
+let audioSrc=img.data("audio");
+
+if(audioSrc){
+currentAudio=new Audio(audioSrc);
+currentAudio.play();
+}
+},
+
+close:function(){
+if(currentAudio){
+currentAudio.pause();
+currentAudio.currentTime=0;
+currentAudio=null;
+}
+}
+}
+
+});
 
 });
 

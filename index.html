@@ -325,6 +325,12 @@ audio {
     background-position: center;
     padding: 20px;
     border-radius: 15px;
+
+
+	.photo-audio {
+    width: 100%;
+    margin-top: 8px;
+	}
 }
 
 /* Pas besoin de toucher à .titre-cursive, .profile-pic-centered, ni .custom-audio-player */ 
@@ -374,6 +380,12 @@ audio {
 				<div class="portfolio-group">
 					<a class="portfolio-item" href="couchersoleil.jpeg">
 						<img src="couchersoleil.jpeg" alt="image 12" />
+						
+						<!-- Son -->
+		<audio controls class="photo-audio">
+			<source src="sunset.mp3" type="audio/mpeg">
+		</audio>
+						
 						<div class="detail">
 							<h3>Coucher de soleil</h3>
 							<p>

@@ -329,12 +329,22 @@ border-radius: 15px;
 }
 
 		
-		.mini-audio{
-    width: 140px;
-    height: 28px;
+	.sound-btn{
+    background: rgba(255,255,255,0.7);
+    border: none;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+    cursor: pointer;
     margin-top: 6px;
-    opacity: 0.85;
-		}
+    transition: 0.2s;
+}
+
+.sound-btn:hover{
+    transform: scale(1.08);
+    background: rgba(255,255,255,0.9);
+}
 
 /* Pas besoin de toucher à .titre-cursive, .profile-pic-centered, ni .custom-audio-player */
 </style>
@@ -379,10 +389,13 @@ border-radius: 15px;
 					<div class="detail">  
 						<h3>Coucher de soleil</h3> 
 
-						<audio controls class="mini-audio">
+		<audio id="sunset-audio">
     <source src="logandu13-sunset-vibes-198338.mp3" type="audio/mpeg">
-						</audio>
-						
+</audio>
+
+<button class="sound-btn" onclick="document.getElementById('sunset-audio').play()">
+    ♫
+</button>				
 						<p>  
 							Debout face à l'horizon,
 

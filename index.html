@@ -330,32 +330,19 @@ border-radius: 15px;
 
 /* sound*/
 
-.audio-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 8px 0;
-    padding: 6px 10px;
-    background: rgba(255, 190, 210, 0.85); /* plus opaque */
-    border-radius: 25px;
-    backdrop-filter: blur(6px);
+audio{
+    width: 140px;
+    margin: 5px auto;
+    display: block;
 }
 
-.audio-btn{
-    border: none;
-    background: transparent;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.download-btn{
-    font-size: 14px;
-    text-decoration: none;
+a[download]{
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 3px;
     color: black;
-    padding: 2px 6px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.6);
+    text-decoration: none;
 }
 	
 		
@@ -405,22 +392,11 @@ border-radius: 15px;
 
    <!--audio -->
 
-<div class="audio-box">
-    
-    <audio class="audio-source">
-        <source src="logandu13-sunset-vibes-198338.mp3" type="audio/mpeg">
-    </audio>
+<audio controls>
+    <source src="logandu13-sunset-vibes-198338.mp3" type="audio/mpeg">
+</audio>
 
-    <button class="audio-btn" onclick="toggleAudio(this)">
-        ▶ / ❚❚
-    </button>
-
-    <a class="download-btn" href="logandu13-sunset-vibes-198338.mp3" download>
-        ⬇
-    </a>
-
-</div>
-
+<a href="logandu13-sunset-vibes-198338.mp3" download>⬇ Télécharger</a>
 						<!--audio fin -->
 
     
@@ -682,22 +658,6 @@ Où chaque arrêt est un plan, chaque regard un scénario.
 	});  
 </script>  
 
-	<audio id="audio-player"></audio>
-
-<script>
-function toggleAudio(btn){
-    const box = btn.parentElement;
-    const audio = box.querySelector(".audio-source");
-
-    if(audio.paused){
-        audio.play();
-        btn.innerHTML = "❚❚";
-    } else {
-        audio.pause();
-        btn.innerHTML = "▶";
-    }
-}
-</script>
 
 
 

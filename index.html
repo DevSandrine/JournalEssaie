@@ -329,30 +329,33 @@ border-radius: 15px;
 
 
 /* sound*/
-		
-.mini-audio-custom{
+
+.audio-box{
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 6px;
-    width: 70px;
-    padding: 4px 8px;
-    margin: 6px 0;
-    background: rgba(255, 200, 220, 0.6);
-    border-radius: 20px;
+    gap: 10px;
+    margin: 8px 0;
+    padding: 6px 10px;
+    background: rgba(255, 190, 210, 0.85); /* plus opaque */
+    border-radius: 25px;
+    backdrop-filter: blur(6px);
+}
+
+.audio-btn{
+    border: none;
+    background: transparent;
+    font-size: 14px;
     cursor: pointer;
-    font-size: 12px;
-    user-select: none;
 }
 
-.mini-audio-custom span:first-child{
-    font-size: 12px;
-}
-
-.bar{
-    flex: 1;
-    height: 3px;
+.download-btn{
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    padding: 2px 6px;
+    border-radius: 50%;
     background: rgba(255,255,255,0.6);
-    border-radius: 2px;
 }
 	
 		
@@ -400,14 +403,25 @@ border-radius: 15px;
 					<div class="detail">  
 						<h3>Coucher de soleil</h3> 
 
-   <div class="mini-audio-custom" onclick="toggleAudio(this)">
-        <span>▶</span>
-        <span class="bar"></span>
-    </div>
+   <!--audio -->
 
+<div class="audio-box">
+    
     <audio class="audio-source">
         <source src="logandu13-sunset-vibes-198338.mp3" type="audio/mpeg">
     </audio>
+
+    <button class="audio-btn" onclick="toggleAudio(this)">
+        ▶ / ❚❚
+    </button>
+
+    <a class="download-btn" href="logandu13-sunset-vibes-198338.mp3" download>
+        ⬇
+    </a>
+
+</div>
+
+						<!--audio fin -->
 
     
 						<p>  
@@ -671,15 +685,16 @@ Où chaque arrêt est un plan, chaque regard un scénario.
 	<audio id="audio-player"></audio>
 
 <script>
-function toggleAudio(el){
-    const audio = el.parentElement.querySelector(".audio-source");
+function toggleAudio(btn){
+    const box = btn.parentElement;
+    const audio = box.querySelector(".audio-source");
 
     if(audio.paused){
         audio.play();
-        el.querySelector("span").innerHTML = "❚❚";
+        btn.innerHTML = "❚❚";
     } else {
         audio.pause();
-        el.querySelector("span").innerHTML = "▶";
+        btn.innerHTML = "▶";
     }
 }
 </script>

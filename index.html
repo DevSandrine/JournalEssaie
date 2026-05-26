@@ -635,30 +635,31 @@ Où chaque arrêt est un plan, chaque regard un scénario.
 	});  
 
 <script>
+
 function openImage(imgSrc, audioSrc) {
 
-    // afficher popup (ton code existant)
+    // afficher popup (NE CHANGE PAS TON STYLE)
     document.getElementById("popup").style.display = "block";
     document.getElementById("popupImg").src = imgSrc;
 
-    // lancer le son
+    // jouer son
     const audio = document.getElementById("popupAudio");
     audio.src = audioSrc;
     audio.currentTime = 0;
     audio.play();
 }
-</script>
 
-    
-<script>
 function closePopup() {
 
+    // cacher popup
     document.getElementById("popup").style.display = "none";
 
+    // arrêter son
     const audio = document.getElementById("popupAudio");
     audio.pause();
     audio.currentTime = 0;
 }
+
 </script>
 
     
